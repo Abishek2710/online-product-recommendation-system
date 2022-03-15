@@ -6,3 +6,4 @@ sklearn
 imblearn
 nltk
 xgboost
+gunicorn==20.0.4
