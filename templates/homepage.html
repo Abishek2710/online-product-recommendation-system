@@ -1,9 +1,15 @@
 <body>
     <div class="login">
-      <h1>Online Product Recommendation</h1>
+      <head>
+        <style>
+        h1 {text-align: center;}
+        form {text-align: center;}
+        </style>
+      </head>
+      <h1 style="background-color:rgba(30, 229, 255, 0.932);">Online Product Recommendation</h1>
   
       <!-- Main Input For Receiving Query to our ML for the fields,  area, bedroom, bathrooms, 'basement', stories, guestroom, parking, areaperbedroom, bbratio-->
-      <form method="post" action="{{url_for('submit')}}">
+      <form method="post">
         <input type="text" name="Username" placeholder="Name of the user" required="required" /><br><br>        
         
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>

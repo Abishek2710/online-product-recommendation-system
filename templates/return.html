@@ -1,8 +1,13 @@
 <body>
     <div class="login">
-      <h1>Online Product Recommendation</h1>
-
-      <!-- <h3> Is {{name}} a valid name? - {{check}}</h3> -->
+      <head>
+        <style>
+        h1 {text-align: center;}
+        h3 {text-align: center;}
+        body {border-spacing:20px; padding:2px; margin-left:auto; margin-right:auto;}
+        </style>
+      </head>
+      <h1 style="background-color:rgba(30, 229, 255, 0.932);">Online Product Recommendation</h1>
       <h3> Recommendation for {{name}} are: </h3>      
       
       <body>
@@ -11,9 +16,11 @@
                     {{titles[loop.index]}}
                     {{ table|safe }}
         {% endfor %}
-        </body>
 
-      <a href="{{url_for('home')}}">Return to home page</a>
+        <a href="{{url_for('home')}}"><p style="text-align:center">Return to home page</p></a>
+      </body>
+  
+      
 
       <br>
       <br>    
