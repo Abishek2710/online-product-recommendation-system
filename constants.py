@@ -10,4 +10,4 @@ PRODUCT_RECO_N = 20
 FINAL_N = 5
 
 # Final columns to be displayed
-FINAL_COLUMNS_TO_BE_DISPLAYED = ['name', 'brand', 'pos_perc']
+FINAL_COLUMNS_TO_BE_DISPLAYED = ['name', 'brand', 'positive_prec_of_reviews']

@@ -50,7 +50,7 @@ class ProductRecommendationUserLevel():
         model_pred = pickle.load(open(MODEL_DIR,'rb'))
 
         # Filter reviews only for required number of products
-        reviews_top_20 = processed_data.loc[processed_data.id.isin(top_20_prod), ['id', 'name', 'review']]
+        reviews_top_20 = processed_data.loc[processed_data.id.isin(top_20_prod), ['id', 'brand', 'name', 'review']]
         
         # Vectorize the input reviews 
         vectorizer = TfidfVectorizer(ngram_range=(1,2), vocabulary=features)
@@ -68,8 +68,8 @@ class ProductRecommendationUserLevel():
         
         # Calculate the positve percentage of reviews 
         df = (df
-              .assign(pos_perc=round(df.pred_pos*100/df.pred_total, 2))
-              .sort_values('pos_perc', ascending=False)
+              .assign(positive_prec_of_reviews=round(df.pred_pos*100/df.pred_total, 2))
+              .sort_values('positive_prec_of_reviews', ascending=False)
               .reset_index(drop=True)
               )
 
