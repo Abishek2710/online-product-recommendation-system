@@ -68,8 +68,8 @@ class ProductRecommendationUserLevel():
         
         # Calculate the positve percentage of reviews 
         df = (df
-              .assign(positive_prec_of_reviews=round(df.pred_pos*100/df.pred_total, 2))
-              .sort_values('positive_prec_of_reviews', ascending=False)
+              .assign(positive_perc_of_reviews=round(df.pred_pos*100/df.pred_total, 2))
+              .sort_values('positive_perc_of_reviews', ascending=False)
               .reset_index(drop=True)
               )
 
