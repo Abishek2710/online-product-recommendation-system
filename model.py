@@ -62,9 +62,9 @@ class ProductRecommendationUserLevel():
         # Aggregate the predictions and calculate the positive percentage of reviews
         df = (reviews_top_20
               .groupby('id',as_index=False)
-              .agg({'name':'max', 'pred': ['count','sum']})
+              .agg({'name':'max', 'brand': 'max', 'pred': ['count','sum']})
               )
-        df.columns = ['id', 'name', 'pred_total', 'pred_pos']
+        df.columns = ['id', 'name', 'brand', 'pred_total', 'pred_pos']
         
         # Calculate the positve percentage of reviews 
         df = (df
