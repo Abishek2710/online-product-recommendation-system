@@ -16,8 +16,8 @@ class ProductRecommendationUserLevel():
         Defintion of valid: Should be present in our input data list (based on assumption that no new user will be included)
         """
         df = pd.read_csv(RAW_DATA_DIR)
-        list_of_valid_username  = df.reviews_username.unique().tolist()
-        return name in list_of_valid_username
+        list_of_valid_username  = df.reviews_username.str.lower().unique().tolist()
+        return name.lower() in list_of_valid_username
     
 
     def get_top20_prod_based_on_recommendation(self, name):
