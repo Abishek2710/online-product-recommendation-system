@@ -10,10 +10,10 @@ def valid_input_check(username):
 	list_of_valid_username  = df.reviews_username.unique().tolist()
 	return username in list_of_valid_username
 
-pro = r'picklefiles\TextProcessedData_20220316_1221.pkl'
-rating = r"picklefiles\user_final_rating_20220316_1224.pkl"
-model = r'picklefiles\SentimentAnalysisLogisticRegressionModel_20220313_2054.pkl'
-features = r'picklefiles\VectorizerFeatures_20220316_1232.pkl'
+pro = 'picklefiles\TextProcessedData_20220316_1221.pkl'
+rating = 'picklefiles\user_final_rating_20220316_1224.pkl'
+model = 'picklefiles\SentimentAnalysisLogisticRegressionModel_20220313_2054.pkl'
+features = 'picklefiles\VectorizerFeatures_20220316_1232.pkl'
 
 pro_data = pickle.load(open(pro,'rb'))
 ratings = pickle.load(open(rating,'rb'))
